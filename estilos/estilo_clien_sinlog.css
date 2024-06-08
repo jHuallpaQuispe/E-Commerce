@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap');
+:root{
+    --oxford-blue : #14213D;
+    --Orange :#FCA311;
+    --Platinum:#E5E5E5;
+}
+
+
 .body-principal {
     background: #000;
     min-height: 100vh;
@@ -17,7 +24,7 @@
 header{
     width: 100%;
     width: 100%;
-    background-color: #023047;
+    background-color: var(--oxford-blue);
     color: white;
 }
 
@@ -28,7 +35,7 @@ header{
 }
 .nav-arriba{
     justify-content: space-between;
-    background-color: #023047;
+    background-color: var(--oxford-blue);
 }
 .Icono{
     flex:1;
@@ -81,6 +88,7 @@ header .buscador{
 
 /*---------------Hasta aca con navegacion menu*----------------/
 
+/*--------------TODO ARTICLE---------------------*/
 /*--------------Deslizante imagenes---------------------*/
 
 /*body*/
@@ -130,7 +138,7 @@ header .buscador{
 
 .btn-left:hover,
 .btn-right:hover {
-    background-color: #333333d4;
+    background-color: var(--oxford-blue);
     color: #fff;
 }
 
@@ -145,13 +153,13 @@ header .buscador{
 
 /*-------------- FIN Deslizante imagenes---------------------*/
 
-/*--------------TODO SECTION---------------------*/
+
 .information{
     width: 70%;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
     padding: 25px 75px;
     margin-top: -75px;
-    background-color: #023047;
+    background-color: var(--oxford-blue);
     position: relative;
     z-index: 2;
     margin-top: -75px; /* Ajuste para superponer sobre .principal-carousel */
@@ -165,7 +173,7 @@ header .buscador{
     width:50px;
 }
 
-h3{
+.information-1 h3{
     font-size: 17px;
     color: white;
     font-family: "Righteous", sans-serif;
@@ -173,35 +181,138 @@ h3{
 .information-1 p{
     margin-bottom: 0;
     text-align: center;
+    
 
 }
-.main-content{
-    font-family: "Righteous", sans-serif;
-    position: relative;
+/*--------------FIN ARTICLE---------------------*/
+
+/*--------------SECCIONES------------------------*/
+.seccion{
+    padding: 30px;
+}
+.productos{
     text-align: center;
     justify-content: space-between;
-    background-color: white;
-    margin-top: -75px; /* Para eliminar el espacio entre .principal-carousel y .main-content */
+}
+.productos h2{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--Platinum);
 }
 
-.content-todo{
-    padding: 50px;
-    margin-left: 40px; /* Espacio a la izquierda */
-    margin-right: 40px; /* Espacio a la derecha */
-}
-.content-todo h2{
-    color:black;
-    margin-top: 50px;
-}
-.content-todo .content-sector{
+.product-list {
     display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+.product-item {
+    background-color: var(--oxford-blue);
+    border: 3px solid var(--Orange);
+    padding: 1rem;
+    width: 200px;
+    border-radius: 15px;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-item h3 {
+    color: var(--Orange);
     text-align: center;
-    justify-content: space-between;
-    margin-top: 50px;
 }
-.content-todo .content-sector img{
-    width: 50%;
+
+.product-item p{
+    color: var(--Platinum);
+    text-align: left;
+    
 }
+.product-item .btn {
+    background-color: var(--Platinum);
+    color: var(--oxford-blue);
+    padding: 0.5rem 0.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+
+.sobre-nosotros {
+    text-align: left;
+    background-color: var(--oxford-blue);
+}
+.sobre-nosotros p{
+    color:var(--Platinum);
+    font-family: Righteous, sans-serif;
+    text-align:start;
+    font-size:24px;
+}
+.sobre-nosotros .about-content .about-column h3{
+    font-size: 40px;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--Orange);
+    
+}
+.sobre-nosotros .about-content .about-column a{
+    text-decoration: none;
+    color: #4a3aff;
+    font-family: Righteous, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    display: -webkit-inline-flex;
+}
+.ti-arrow-big-right:hover{
+    transform: rotate(45deg);
+}
+.ti-arrow-big-right:hover {
+    color: red;
+}
+.ti-arrow-big-right {
+    margin-top: 3px;
+    color: #4a3aff; /* Cambia el color del icono */
+    font-size: 22px; /* Ajusta el tamaño del icono */
+    margin-left:5px; /* Añade un margen a la derecha */
+    transition: transform 0.3s ease; /* Añade una transición suave */
+}
+.ti-arrow-big-right:hover {
+    transform: translateX(3px); /* Mueve el icono 10px a la derecha al pasar el cursor */
+}
+
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.about-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.about-column h3 {
+    color: var(--burdeos);
+}
+
+.about-column p {
+    max-width: 100%;
+}
+
+.about-column img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #3B2F2F;
+    border-radius: 10px;
+}
+
 /*---------------Marcas------------------------*/
 
 .marcas-img{
@@ -223,7 +334,7 @@ h3{
     flex-direction: row-reverse; /* Esto mueve la imagen a la derecha */
     width: 85vw;
     padding: 50px 20px 50px 20px;
-    background: #023047;
+    background: var(--oxford-blue);
     border-radius: 24px;
     box-shadow: 0px 0px 30px #000;
     margin-bottom: 100px;
