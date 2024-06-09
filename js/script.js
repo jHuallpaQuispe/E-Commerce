@@ -82,4 +82,24 @@ function moveToLeft() {
     slider.style.transition = "all ease .6s"
     
     
-}   
+}  
+/*FAG*/
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.faq').addEventListener('click', function(event) {
+        if (event.target.classList.contains('faq-question') || event.target.closest('.faq-question')) {
+            var question = event.target.closest('.faq-question');
+            var answer = question.nextElementSibling;
+            var indicator = question.querySelector('.indicator');
+
+            if (answer.classList.contains('show')) {
+                answer.style.maxHeight = null;
+                answer.classList.remove('show');
+                question.classList.remove('open');
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                answer.classList.add('show');
+                question.classList.add('open');
+            }
+        }
+    });
+});

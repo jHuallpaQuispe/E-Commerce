@@ -189,6 +189,7 @@ header .buscador{
 /*--------------SECCIONES------------------------*/
 .seccion{
     padding: 30px;
+    box-sizing: border-box
 }
 .productos{
     text-align: center;
@@ -297,13 +298,18 @@ header .buscador{
     flex: 1;
     min-width: 200px;
 }
-
+.nosotros{
+    padding-top: 50px;
+}
 .about-column h3 {
     color: var(--burdeos);
 }
 
 .about-column p {
     max-width: 100%;
+}
+.about-column div{
+    font-size: 20px;
 }
 
 .about-column img {
@@ -399,23 +405,82 @@ header .buscador{
 /*--------------- Fin Marcas------------------------*/
 /*--------------FIN SECTION---------------------*/
 
+/*--------------PREGUNTAS FRECUENTES----------*/
 
 
+.faq {
+    background-color: var(--oxford-blue);
+    font-size: 20px;
+    font-family: Righteous, sans-serif;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    padding: 15px;
+    cursor: pointer;
+    background: var(--oxford-blue);
+    color: var(--Orange);
+    font-weight: bold;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+}
 
 
+.indicator {
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background:var(--oxford-blue);
+    transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.faq-answer.show {
+    padding-left: 15px;
+    padding-bottom: 40px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.faq-question.open .indicator {
+    transform: rotate(180deg);
+}
+/*--------------FIN PREGUNTAS FRECUENTES----------*/
 
 
 /*---------------FORMULARIO--------------------*/
 .Formulario-principal{
     font-family: "Righteous", sans-serif;
-    background-color: #f0f0f0;
+    background-color: var(--Platinum);
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
 }
 .Formulario-principal .content-empresa {
-    background-color: #ffffff;
+    background-color: var(--oxford-blue);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -427,14 +492,15 @@ header .buscador{
     margin-bottom: 20px;
 }
 
-.Formulario-principal .company-info h1 {
-    color: #333;
+.Formulario-principal .company-info img {
     margin-bottom: 10px;
+    height: 100px;
 }
 
 .Formulario-principal .company-info p {
-    color: #555;
+    color: var(--Platinum);
     margin-bottom: 20px;
+    font-size: 20px;
 }
 
 .Formulario-principal .social-media {
@@ -444,19 +510,19 @@ header .buscador{
 }
 
 .Formulario-principal .social-icon {
-    color: white;
-    background-color: #555;
+    color: var(--oxford-blue);
+    background-color: var(--Orange);
     padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 17px;
 }
 
 .Formulario-principal .social-icon:hover {
-    background-color: #333;
+    background-color: #aa874f;
 }
 .form-container {
-    background-color: #ffffff;
+    background-color: var(--oxford-blue);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -473,12 +539,12 @@ header .buscador{
 .form-aspecto h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: var(--Platinum);
 }
 
 .form-aspecto label {
     margin-bottom: 10px;
-    color: #555;
+    color: var(--Orange);
     font-weight: bold;
 }
 
@@ -499,8 +565,8 @@ header .buscador{
 }
 
 .form-aspecto input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--Orange);
+    color: var(--oxford-blue);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -538,4 +604,8 @@ header .buscador{
      color: #0df053;
      background-color: #fff;
      transform: scale(1.1);
+}
+
+footer{
+    text-align: center;
 }
