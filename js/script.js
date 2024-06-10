@@ -103,3 +103,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+/*HEADER*/ 
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    const dropdowns = document.querySelectorAll(".dropdown");
+
+    hamburger.addEventListener("click", function() {
+        navLinks.classList.toggle("nav-active");
+        hamburger.classList.toggle("toggle");
+    });
+
+    navLinks.addEventListener("click", function(event) {
+        if (event.target.tagName === 'A' && event.target.nextElementSibling) {
+            event.preventDefault();
+            const submenu = event.target.nextElementSibling;
+            submenu.classList.toggle("dropdown-active");
+        }
+    });
+});
