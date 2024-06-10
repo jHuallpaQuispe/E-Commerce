@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap');
+@import 'node_modules/@tabler/icons-webfont/dist/tabler-icons.scss';
 :root{
+    --color-primario:#121b28;
+    --color-secundario:#1e2734;
+    --degradado-horizontal:linear-gradient(to right, #121b28 0%, #1e2734 50%);
+    --degradado-vertical:linear-gradient(to bottom, #121b28 0%, #1e2734 50%);
+    --degradado-vertical2:linear-gradient(to bottom, #1e2734 0%, #121b28 50%);
     --oxford-blue : #14213D;
+    --titulos: #c4cad4;
     --Orange :#FCA311;
     --Platinum:#E5E5E5;
 }
-
 
 .body-principal {
     background: #000;
@@ -15,28 +21,68 @@
     margin: 0;
     padding: 0;
     vertical-align: baseline;
-    background-image: url(../imagenes/fondo2.jpg);
+background-color: var(--color-secundario);
     background-attachment: fixed;
     background-size: cover;
     /*background-color:#2a0928;*/
 }
 /*-----------------Menu de navegacion entra ventanas-------------*/
+header{
+    font-family: "Righteous", sans-serif;
+}
 .nav-container {
+    font-family: "Righteous", sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background-color: var(--oxford-blue);
+    background: var(--degradado-horizontal);
 }
 
 .logo {
     height: 60PX;
 }
 
-.icon {
-    height: 24px;
-    width: 24px;
+.icons {
+    text-decoration: none;
     margin-left: 20px;
+}
+.icons a{
+    text-decoration: none;
+}
+.icons i{
+    font-size: 40px;
+    color: var(--Platinum);
+}
+.icons i:hover{
+    color: rgb(189, 189, 189);
+}
+/*User name*/
+.user-container {
+     position: relative; /* No es necesario para este caso */
+}
+
+.user-menu {
+    display: block; /* Cambiamos display a block */
+    position: absolute;
+    top: 50px; /* Posicionamos el menú debajo del icono de usuario */
+    right: 0;
+    background-color: var(--color-primario);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+
+.user-menu a {
+    display: block;
+    color: var(--Platinum);
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.user-menu a:hover {
+    color: #ccc;
 }
 
 /* Top Navigation Styles */
@@ -53,20 +99,19 @@
 
 /* Main Navigation Styles */
 .main-nav {
-    background-color: var(--oxford-blue);
+    background: var(--degradado-horizontal);
     padding: 10px 0;
     border-top: 1px solid #eaeaea;
     /*border-bottom: 1px solid #eaeaea;*/
 }
 
 .main-nav .main-container {
-    position: relative;
-
+    position:relative;
     padding: 0 20px;
 }
 
 nav ul {
-    z-index: 1;
+    z-index:1;
     justify-content: center;
     list-style: none;
     margin: 0;
@@ -84,7 +129,9 @@ nav ul li a {
     padding: 15px 20px;
     display: block;
 }
-
+nav ul li a:hover{
+    color: rgb(189, 189, 189);
+}
 nav ul li:hover .dropdown {
     display: block;
 }
@@ -95,7 +142,7 @@ nav ul li:hover .dropdown {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: var(--Orange);
+    background-color: var(--color-primario);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 
 }
@@ -107,7 +154,6 @@ nav ul li:hover .dropdown {
 
 .dropdown li a {
     padding: 10px 20px;
-    color: var(--oxford-blue);
 }
 
 /* Hamburger Menu Styles */
@@ -194,36 +240,42 @@ nav ul li:hover .dropdown {
 /*-------------- FIN Deslizante imagenes---------------------*/
 
 
-.information{
-    width: 70%;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    padding: 25px 75px;
-    margin-top: -75px;
-    background-color: var(--oxford-blue);
+.information {
+    width: 100%;
+    padding: 25px;
+    background-color: var(--color-primario);
     position: relative;
-    z-index: 2;
-    margin-top: -75px; /* Ajuste para superponer sobre .principal-carousel */
-}
-.information-content{
-    text-align: center;
-    display:flex;
-    justify-content: space-between;
-}
-.information-1 img{
-    width:50px;
 }
 
-.information-1 h3{
-    font-size: 17px;
-    color: white;
+.information-content {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.information-1 {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+}
+
+.information-1 .ti {
+    font-size: 30px;
+}
+
+.information-1 h3 {
+    font-size: 20px;
+    color: var(--Orange);
     font-family: "Righteous", sans-serif;
 }
-.information-1 p{
-    margin-bottom: 0;
-    text-align: center;
-    
 
+.information-1 p {
+    font-size: 16px;
+    margin-bottom: 0;
+    font-family: "Righteous", sans-serif;
 }
+
 /*--------------FIN ARTICLE---------------------*/
 
 /*--------------SECCIONES------------------------*/
@@ -231,35 +283,41 @@ nav ul li:hover .dropdown {
     padding: 30px;
     box-sizing: border-box
 }
-.productos{
+.productos {
+    font-family: "Righteous", sans-serif;
     text-align: center;
-    justify-content: space-between;
 }
-.productos h2{
+
+.productos h2 {
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     font-family: 'Orbitron', sans-serif;
     color: var(--Platinum);
 }
 
 .product-list {
     display: flex;
-    justify-content:space-between;
     flex-wrap: wrap;
+    justify-content: center;
     margin: 20px auto;
 }
 
 .product-item {
-    background-color: var(--oxford-blue);
-    border: 3px solid var(--Orange);
+    border: 5px solid hsla(0,0%,100%,.12);;
     padding: 1rem;
-    width: 200px;
-    border-radius: 15px;
+    width: calc(25% - 15px); /* Ajusta el tamaño para que haya espacio entre los elementos */
+    margin: 10px;
+    border-radius: 10px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    text-decoration: none; /* Quita la decoración de texto predeterminada */
+    color: inherit; /* Hereda el color de texto */
+    position: relative; /* Ajustes para el efecto hover */
 }
 
 .product-item img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    max-width: 200px; /* Limita el tamaño de la imagen para que no sea demasiado grande en dispositivos móviles */
+    height: 130px;
 }
 
 .product-item h3 {
@@ -267,25 +325,38 @@ nav ul li:hover .dropdown {
     text-align: center;
 }
 
-.product-item p{
+.product-item p {
     color: var(--Platinum);
     text-align: left;
-    
 }
-.product-item .btn {
-    background-color: var(--Platinum);
-    color: var(--oxford-blue);
-    padding: 0.5rem 0.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 0.5rem;
+
+/* Cambiar el color del borde al pasar el cursor sobre el elemento */
+.product-item:hover {
+    border-color: var(--Green); /* Cambia el color del borde */
 }
+
+/* Estilo para el efecto al pasar el cursor */
+.product-item::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 3px solid transparent;
+    border-radius: 13px;
+    transition: border-color 0.3s ease;
+}
+
+.product-item:hover::before {
+    border-color: var(--Green); /* Cambia el color del borde al pasar el cursor */
+}
+
 
 
 .sobre-nosotros {
     text-align: left;
-    background-color: var(--oxford-blue);
+    background: var(--degradado-horizontal);
 }
 .sobre-nosotros p{
     color:var(--Platinum);
@@ -338,9 +409,11 @@ nav ul li:hover .dropdown {
     flex: 1;
     min-width: 200px;
 }
-.nosotros{
+
+.nosotros {
     padding-top: 50px;
 }
+
 .about-column h3 {
     color: var(--burdeos);
 }
@@ -348,7 +421,8 @@ nav ul li:hover .dropdown {
 .about-column p {
     max-width: 100%;
 }
-.about-column div{
+
+.about-column div {
     font-size: 20px;
 }
 
@@ -358,13 +432,7 @@ nav ul li:hover .dropdown {
     border: 2px solid #3B2F2F;
     border-radius: 10px;
 }
-
 /*---------------Marcas------------------------*/
-
-/*--------------- Fin Marcas------------------------*/
-/*--------------FIN SECTION---------------------*/
-
-/*--------------PREGUNTAS FRECUENTES----------*/
 .slider-container {
     text-align: center;
     width: 100%;
@@ -401,8 +469,6 @@ nav ul li:hover .dropdown {
 .slide img {
     width: 100%;
     vertical-align: top;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes scroll {
@@ -414,15 +480,18 @@ nav ul li:hover .dropdown {
     }
 }
 
+/*--------------- Fin Marcas------------------------*/
+/*--------------FIN SECTION---------------------*/
+
+/*--------------PREGUNTAS FRECUENTES----------*/
+
 .faq {
-    background-color: var(--oxford-blue);
+    background: var(--degradado-vertical2);
     font-size: 20px;
     font-family: Righteous, sans-serif;
     padding-left: 100px;
     padding-right: 100px;
     padding-bottom: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
@@ -437,7 +506,6 @@ nav ul li:hover .dropdown {
 .faq-question {
     padding: 15px;
     cursor: pointer;
-    background: var(--oxford-blue);
     color: var(--Orange);
     font-weight: bold;
     user-select: none;
@@ -456,7 +524,6 @@ nav ul li:hover .dropdown {
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    background:var(--oxford-blue);
     transition: max-height 0.5s ease, padding 0.5s ease;
 }
 
@@ -477,45 +544,58 @@ nav ul li:hover .dropdown {
 
 
 /*---------------FORMULARIO--------------------*/
-.Formulario-principal{
+.Formulario-principal {
     font-family: "Righteous", sans-serif;
-    background-color: var(--Platinum);
+    background: var(--degradado-vertical);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    padding: 40px 0; /* Aumenta el padding */
 }
-.Formulario-principal .content-empresa {
-    background-color: var(--oxford-blue);
-    padding: 20px;
+
+.content-empresa,
+.form-container {
+    background-color: var(--color-primario);
+    padding: 40px; /* Aumenta el padding */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    width: 100%;
-}
-.Formulario-principal .company-info {
-    text-align: center;
-    margin-bottom: 20px;
+    width: calc(100% - 80px); /* Reduce el ancho para centrar */
+    max-width: 800px; /* Agrega un ancho máximo */
+    margin: 20px; /* Añade un margen entre los elementos */
 }
 
-.Formulario-principal .company-info img {
+.company-info {
+    text-align: center; /* Centra el contenido */
+}
+
+.form-container {
+    display: flex;
+    justify-content: center; /* Centra el formulario */
+    align-items: center; /* Centra el formulario */
+}
+
+
+.company-info img {
+    max-width: 100%;
+    height: auto;
     margin-bottom: 10px;
-    height: 100px;
 }
 
-.Formulario-principal .company-info p {
+.company-info p {
     color: var(--Platinum);
     margin-bottom: 20px;
     font-size: 20px;
+    text-align: center;
 }
 
-.Formulario-principal .social-media {
+.social-media {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.Formulario-principal .social-icon {
+.social-icon {
     color: var(--oxford-blue);
     background-color: var(--Orange);
     padding: 10px 15px;
@@ -524,17 +604,8 @@ nav ul li:hover .dropdown {
     font-size: 17px;
 }
 
-.Formulario-principal .social-icon:hover {
-    background-color: #aa874f;
-}
 .form-container {
-    background-color: var(--oxford-blue);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 100%;
-    margin: 0 auto;
+    width: calc(50% - 20px); /* 50% del espacio menos el padding */
 }
 
 .form-aspecto form {
@@ -583,6 +654,7 @@ nav ul li:hover .dropdown {
 .form-aspecto input[type="submit"]:hover {
     background-color: #45a049;
 }
+
 /*---------------FIN FORMULARIO--------------------*/
 /*Whatsapp*/
 .wpp-boton i {
@@ -676,5 +748,36 @@ footer{
     .slide-track {
         width: calc(150px * 10);
         animation: scroll 10s linear infinite; /* Adjust the duration for smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /*formulario*/
+    .Formulario-principal {
+        flex-direction: column; /* Cambia la disposición a una columna */
+    }
+
+    .content-empresa,
+    .form-container {
+        width: calc(100% - 40px); /* Considerando el padding de 20px */
+        max-width: none; /* Elimina el ancho máximo */
+    }
+
+    .content-empresa {
+        order: -1; /* Cambia el orden para que aparezca primero */
+    }
+
+    .form-container {
+        order: 1; /* Cambia el orden para que aparezca después */
+    }
+    /*SOBRE NOSOTROS*/
+    .about-content {
+        flex-direction: column; /* Cambia la disposición a columna en dispositivos más pequeños */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .about-column {
+        min-width: auto; /* Elimina el ancho mínimo para permitir que los elementos se ajusten */
+        margin-bottom: 20px; /* Agrega espacio entre los elementos en dispositivos más pequeños */
     }
 }

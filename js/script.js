@@ -123,3 +123,27 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+/*User name */
+document.addEventListener("DOMContentLoaded", function() {
+    var userIcon = document.getElementById("user-icon");
+    var userMenu = document.getElementById("user-menu");
+
+    userIcon.addEventListener("click", function(event) {
+        console.log("Clic en el icono de usuario");
+        event.stopPropagation(); // Evita que el evento de clic se propague a otros elementos
+        // Si el menú está oculto, lo mostramos; de lo contrario, lo ocultamos
+        if (userMenu.style.display === "none" || userMenu.style.display === "") {
+            userMenu.style.display = "block";
+        } else {
+            userMenu.style.display = "none";
+        }
+    });
+
+    // Evento de clic para cerrar el menú si se hace clic fuera de él
+    document.addEventListener("click", function(event) {
+        if (!userMenu.contains(event.target) && event.target !== userIcon) {
+            userMenu.style.display = "none";
+        }
+    });
+});

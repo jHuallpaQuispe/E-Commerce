@@ -24,14 +24,19 @@
         <header>
             <div class="top-nav">
                 <div class="nav-container">
-                    <div class="logo">
+                    <div href="index.php.html" class="logo">
                         <a href="index.php.html">
                             <img src="imagenes/asd.png" alt="Logo de la página" class="logo">
                         </a>
                     </div>
                     <div class="icons">
-                        <a href="#"><img src="path/to/login-icon.png" alt="Login" class="icon"></a>
-                        <a href="#"><img src="path/to/cart-icon.png" alt="Cart" class="icon"></a>
+                        <a href="#"><i class="ti ti-shopping-cart"></i></a>
+                        <a id="user-icon"><i class="ti ti-user"></i></a>
+                        <div class="user-menu" id="user-menu">
+                            <a href="#">Iniciar sesión</a>
+                            <a href="#">Ver perfil</a>
+                            <a href="#">Cerrar sesión</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -108,24 +113,24 @@
             <section class="information container">
                 <div class ="information-content">
                     <div class = "information-1">
-                        <img src="imagenes/i1.svg" alt="">
+                        <i class="ti ti-building-store"></i>
                         <h3>Atencion 24hrs</h3>
                         <p>
                             Estamos 24 /7 
                         </p>
                     </div>
                     <div class = "information-1">
-                        <img src="imagenes/i2.svg" alt="">
+                        <i class="ti ti-star"></i>
                         <h3>Pago seguro</h3>
                         <p>
                             10+ años de trayectoria y experiencia en el rubro.
                         </p>
                     </div>
                     <div class = "information-1">
-                        <img src="imagenes/i3.svg" alt="">
-                        <h3>Rapidez</h3>
+                        <i class="ti ti-shopping-bag-check"></i>
+                        <h3>Variedad</h3>
                         <p>
-                            Entregas en menos de 72 horas hábiles.
+                            Contamos con un gran surtido de productos.
                         </p>
                     </div>
                 </div>
@@ -135,36 +140,26 @@
         <section id="productos" class="productos seccion">
                 <h2>Nuestros Productos</h2>
                 <div class="product-list">
-                    <div class="product-item">
+                    <a href="link_para_producto1" class="product-item">
                         <img src="imagenes/marcas/producto.png" alt="Vino">
                         <h3>Con alcohol</h3>
-                        <p>Descripción del vino tinto.</p>
-                        <a href="#" class="btn">Comprar Ahora</a>
-                    </div>
-                    <div class="product-item">
-                        <img src="imagenes/marcas/producto2.png" alt="Whisky">
+                    </a>
+                    <a href="link_para_producto1" class="product-item">
+                        <img src="imagenes/marcas/producto2.png" alt="Vino">
                         <h3>Gaseosas</h3>
-                        <p>Descripción del whisky.</p>
-                        <a href="#" class="btn">Comprar Ahora</a>
-                    </div>
-                    <div class="product-item">
-                        <img src="imagenes/marcas/producto3.png" alt="Whisky">
+                    </a>
+                    <a href="link_para_producto1" class="product-item">
+                        <img src="imagenes/marcas/producto3.png" alt="Vino">
                         <h3>Aperitivos</h3>
-                        <p>Descripción del whisky.</p>
-                        <a href="#" class="btn">Comprar Ahora</a>
-                    </div>
-                    <div class="product-item">
-                        <img src="imagenes/marcas/producto4.png" alt="Whisky">
+                    </a>
+                    <a href="link_para_producto1" class="product-item">
+                        <img src="imagenes/marcas/producto4.png" alt="Vino">
                         <h3>Energizantes</h3>
-                        <p>Descripción del whisky.</p>
-                        <a href="#" class="btn">Comprar Ahora</a>
-                    </div>
-                    <div class="product-item">
-                        <img src="imagenes/marcas/producto5.png" alt="Whisky">
+                    </a>
+                    <a href="link_para_producto1" class="product-item">
+                        <img src="imagenes/marcas/producto5.png" alt="Vino">
                         <h3>Cervezas</h3>
-                        <p>Descripción del whisky.</p>
-                        <a href="#" class="btn">Comprar Ahora</a>
-                    </div>
+                    </a>
                     <!-- Más productos -->
                 </div>
         </section>
@@ -259,6 +254,17 @@
         </section>
 
         <section class="Formulario-principal seccion" id = "Formulario">
+            <div class="content-empresa" >
+                <div class="company-info">
+                    <img src="imagenes/asd.png" alt="Logo de la página">
+                    <p>¿Tenes dudas? Rellena el siguiente formulario o escribirnos a nuestros medios de contacto y pronto nos pondremos en comunicación con vos.</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">Facebook</a>
+                        <a href="#" class="social-icon">Twitter</a>
+                        <a href="#" class="social-icon">Instagram</a>
+                    </div>
+                </div>
+            </div>
             <div class="form-container" id="contacto">
                 <form class="form-aspecto">
                     <h2>Dejanos tu mensaje</h2>
@@ -283,16 +289,7 @@
                     <input type="submit" value="Enviar">
                 </form>
             </div>
-            <div class="content-empresa" >
-                <div class="company-info">
-                    <img src="imagenes/asd.png" alt="Logo de la página">
-                    <p>¿Tenes dudas? Rellena el siguiente formulario o escribirnos a nuestros medios de contacto y pronto nos pondremos en comunicación con vos.</p>
-                    <div class="social-media">
-                        <a href="#" class="social-icon">Facebook</a>
-                        <a href="#" class="social-icon">Twitter</a>
-                        <a href="#" class="social-icon">Instagram</a>
-                    </div>
-            </div>
+
         </section>  
             <script src="script.js"></script>
             <a href="https://api.whatsapp.com/send?phone=1123836055" class="wpp-boton" target="_blank" >
