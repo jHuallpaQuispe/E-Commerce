@@ -147,3 +147,28 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+/*Para verificar edad*/ 
+document.addEventListener("DOMContentLoaded", function() {
+    var modal = document.getElementById("myModal");
+    var yesBtn = document.getElementById("yesBtn");
+    var noBtn = document.getElementById("noBtn");
+
+    // Mostrar el modal al cargar la página
+    modal.style.display = "block";
+
+    // Cuando se haga clic en "Sí"
+    yesBtn.addEventListener("click", function() {
+        // Ocultar el modal
+        modal.style.display = "none";
+        // Continuar con la navegación normalmente
+    });
+
+    // Cuando se haga clic en "No"
+    noBtn.addEventListener("click", function() {
+        // Redirigir o mostrar un mensaje de error, según sea necesario
+        alert("Lo siento, debes ser mayor de edad para ingresar.");
+        // Otra opción: redirigir a una página de "No autorizado"
+        window.location.href = "../advertencia.html";
+    });
+});
